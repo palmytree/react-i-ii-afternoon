@@ -1,0 +1,162 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 5px;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+td {
+	display: inline-flex;
+	padding: 5px 0;
+}
+
+ol {
+	list-style-type: decimal;
+	margin-left: 60px;
+}
+
+.App {
+	height: 100vh;
+	width: 100vw;
+	background-color: #222222;
+	position: relative;
+}
+
+.flex {
+	display: flex;
+}
+
+.col {
+	flex-direction: column;
+}
+
+.center {
+	justify-content: center;
+}
+
+.mid {
+	align-items: center;
+}
+
+.rel {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.abs {
+	position: absolute;
+}
+
+.Header {
+	background-color: #34a5da;
+	width: 100vw;
+	height: 10vh;
+	min-height: 70px;
+	position: fixed;
+	top: 0;
+}
+
+.nav-links-container {
+	padding-left: 50px;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: black;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.Card {
+	height: 55vh;
+	min-height: 300px;
+	width: 80vw;
+	min-width: 350px;
+	background-color: #ebebeb;
+	align-items: baseline;
+}
+
+.card-title-container {
+	border-bottom: 2px solid #34a5da;
+}
+
+.card-text-container {
+	margin: 30px 50px;
+	height: 100%;
+	width: 50%;
+	min-width: 250px;
+}
+
+.card-data {
+	margin-top: 20px;
+}
+
+.card-data-result {
+	margin-left: 5px;
+}
+
+.Navbar {
+	width: 80vw;
+	min-width: 350px;
+	justify-content: space-between;
+}
+
+.nav-btn {
+	background: none;
+	border: none;
+	color: white;
+	margin-top: 10px;
+	font-size: 1.3rem;
+	width: 150px;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.blue-btn {
+  background-color: #34a5da;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 15px;
+  margin: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-count {
+  right: 5px;
+  top: 5px;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 12px;
+	}
+	.card-text-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	td {
+		text-align: left;
+	}
+}
