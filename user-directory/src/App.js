@@ -32,9 +32,16 @@ export default class App extends Component {
 	}
 	changeData(id, newObj) {
 		const { data } = this.state;
-		const output = data.map(e => (e.id === id ? newObj : e));
+		const output = data.map( e => {
+			if ( e.id === id ) {
+				return newObj
+			} else {
+				return e
+			}
+		});
 		this.setState({
-			data: output
+			data: output,
+			editFormVis: 'hide'
 		});
 	}
 	next() {
