@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
-export default class Card extends Component {
+export default class EditCard extends Component {
+	constructor () {
+		super()
+		this.state = {
+			first: '',
+			last: '',
+			city: '',
+			country: '',
+			employer: '',
+			title: '',
+            favMov1: '',
+            favMov2: '',
+            favMov3: ''
+		}
+	}
 	generateFavMovies(index) {
 		const output = this.props.getData(index).favoriteMovies.map((e, i) => {
 			return <li key={i}>{e}</li>;
@@ -8,13 +22,11 @@ export default class Card extends Component {
 		return output;
 	}
 	render() {
-		const { getData, cardNum, total } = this.props;
+		const { getData, cardNum, total, vis } = this.props;
 		const i = cardNum - 1;
 		return (
-			<div className='Card rel'>
-				<span className='card-count abs'>
-					{cardNum}/{total}
-				</span>
+			<div className={'Card Edit fixed ' + vis}>
+                <span className='card-count abs'>{ cardNum }/{ total }</span>
 				<div className='card-text-container flex col'>
 					<div className='card-title-container flex'>
 						<h2>

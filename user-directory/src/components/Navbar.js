@@ -8,8 +8,8 @@ const Navbar = props => {
 			</button>
 			<div className='edit-btn-container'>
 				<button className='blue-btn'>Edit</button>
-				<button className='blue-btn' onClick={props.del}>Delete</button>
-				<button className='blue-btn'>New</button>
+				<button className='blue-btn cancel' onClick={props.del}>Delete</button>
+				<button className='blue-btn' onClick={props.addFormToggle}>New</button>
 			</div>
 			<button className='nav-btn right' onClick={props.next}>
 				Next{' >'}

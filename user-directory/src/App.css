@@ -58,6 +58,22 @@ ol {
 	position: absolute;
 }
 
+.tc {
+  text-align: center;
+}
+
+.p-10{
+  padding: 10px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
 .Header {
 	background-color: #34a5da;
 	width: 100vw;
@@ -87,13 +103,18 @@ ol {
 	align-items: baseline;
 }
 
+.Edit {
+  opacity: .9;
+  top: calc((100vh - 55vh) / 2);
+}
+
 .card-title-container {
 	border-bottom: 2px solid #34a5da;
 }
 
 .card-text-container {
 	margin: 30px 50px;
-	height: 100%;
+	height: calc(100% - 60px);
 	width: 50%;
 	min-width: 250px;
 }
@@ -131,13 +152,26 @@ ol {
 
 .blue-btn {
   background-color: #34a5da;
+  height: 40px;
+  width: 80px;
   border: none;
   border-radius: 15px;
-  padding: 8px 15px;
   margin: 10px;
   color: white;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.blue-btn:hover {
+  box-shadow: 0 1px 4px 0 lightgray;
+}
+
+.cancel:hover {
+  background-color: tomato;
+}
+
+.blue-btn:hover, .nav-btn:hover {
+  cursor: pointer;
 }
 
 .card-count {
@@ -145,6 +179,29 @@ ol {
   top: 5px;
   font-size: 1.75rem;
   font-weight: bold;
+}
+
+.New-card-form {
+  height: 60vh;
+  min-height: 500px;
+  width: 70vw;
+  min-width: 300px;
+  background-color: #ebebeb;
+  z-index: 3;
+  opacity: .9;
+}
+
+label {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+input {
+  padding: 5px;
+  margin: 3px 20px;
+  text-align: center;
+  width: 80%;
 }
 
 @media only screen and (max-width: 600px) {
