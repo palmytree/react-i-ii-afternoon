@@ -24,9 +24,18 @@ export default class App extends Component {
 		this.del = this.del.bind(this);
 		this.add = this.add.bind(this);
 		this.addFormToggle = this.addFormToggle.bind(this);
+		this.editFormToggle = this.editFormToggle.bind(this);
+		this.changeData = this.changeData.bind(this);
 	}
 	getData(id) {
 		return this.state.data[id];
+	}
+	changeData(id, newObj) {
+		const { data } = this.state;
+		const output = data.map(e => (e.id === id ? newObj : e));
+		this.setState({
+			data: output
+		});
 	}
 	next() {
 		let { cardNum, totalCards } = this.state;
@@ -59,15 +68,15 @@ export default class App extends Component {
 			totalCards: ++totalCards,
 			cardNum: totalCards
 		});
-  }
-  editFormToggle() {
-    let { editFormVis } = this.state
-    if ( editFormVis === 'show' ) {
-      this.setState({editFormVis: 'hide'})
-    } else {
-      this.
-    }
-  }
+	}
+	editFormToggle() {
+		let { editFormVis } = this.state;
+		if (editFormVis === 'show') {
+			this.setState({ editFormVis: 'hide' });
+		} else {
+			this.setState({ editFormVis: 'show' });
+		}
+	}
 	addFormToggle() {
 		let { addFormVis } = this.state;
 		if (addFormVis === 'show') {
@@ -94,14 +103,17 @@ export default class App extends Component {
 				<EditCard
 					getData={this.getData}
 					cardNum={this.state.cardNum}
-          total={ this.state.totalCards }
-          vis={this.state.editFormVis}
+					total={this.state.totalCards}
+					vis={this.state.editFormVis}
+					toggleVis={ this.editFormToggle }
+					changeData={this.changeData}
 				/>
 				<Navbar
 					next={this.next}
 					prev={this.prev}
 					del={this.del}
 					addFormToggle={this.addFormToggle}
+					editFormToggle={this.editFormToggle}
 				/>
 			</div>
 		);

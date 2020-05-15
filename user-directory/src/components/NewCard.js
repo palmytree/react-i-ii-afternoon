@@ -83,6 +83,7 @@ export default class NewCard extends Component {
 				className={this.props.vis + ' New-card-form fixed flex col mid center'}>
 				<h2 className='tc p-10'>Add New Person Card</h2>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='First Name'
 					name='first'
@@ -90,6 +91,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Last Name'
 					name='last'
@@ -97,6 +99,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='City'
 					name='city'
@@ -104,6 +107,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Country'
 					name='country'
@@ -111,6 +115,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Employer'
 					name='employer'
@@ -118,6 +123,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Job Title'
 					name='title'
@@ -126,6 +132,7 @@ export default class NewCard extends Component {
 				/>
 				<label>Favorite movies</label>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Favorite Movie 1'
 					name='favMov1'
@@ -133,6 +140,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Favorite Movie 2'
 					name='favMov2'
@@ -140,6 +148,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<input
+					className="add-field"
 					type='text'
 					placeholder='Favorite Movie 3'
 					name='favMov3'
@@ -147,7 +156,7 @@ export default class NewCard extends Component {
 					onChange={e => this.change(e)}
 				/>
 				<div className='form-btns'>
-					<button type='submit' className='blue-btn submit' onClick={this.submit}>
+					<button type='submit' className='blue-btn add' onClick={this.submit}>
 						Submit
 					</button>
 					<button className='blue-btn cancel' onClick={this.reset}>

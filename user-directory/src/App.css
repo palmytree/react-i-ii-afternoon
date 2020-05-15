@@ -15,6 +15,7 @@ h3 {
 
 td {
 	display: inline-flex;
+	align-items: center;
 	padding: 5px 0;
 }
 
@@ -59,19 +60,19 @@ ol {
 }
 
 .tc {
-  text-align: center;
+	text-align: center;
 }
 
-.p-10{
-  padding: 10px;
+.p-10 {
+	padding: 10px;
 }
 
 .show {
-  visibility: visible;
+	visibility: visible;
 }
 
 .hide {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .Header {
@@ -104,8 +105,11 @@ ol {
 }
 
 .Edit {
-  opacity: .9;
-  top: calc((100vh - 55vh) / 2);
+	opacity: 0.95;
+	top: calc((100vh - 65vh) / 2);
+	height: 65vh;
+	width: 85vw;
+	background-color: lightyellow;
 }
 
 .card-title-container {
@@ -151,57 +155,88 @@ ol {
 }
 
 .blue-btn {
-  background-color: #34a5da;
-  height: 40px;
-  width: 80px;
-  border: none;
-  border-radius: 15px;
-  margin: 10px;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
+	background-color: #34a5da;
+	height: 40px;
+	width: 80px;
+	border: none;
+	border-radius: 15px;
+	margin: 10px;
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 .blue-btn:hover {
-  box-shadow: 0 1px 4px 0 lightgray;
+	box-shadow: 0 0 5px 1px lightgray;
 }
 
 .cancel:hover {
-  background-color: tomato;
+	background-color: tomato;
 }
 
-.blue-btn:hover, .nav-btn:hover {
-  cursor: pointer;
+.edit:hover {
+	background-color: yellow;
+	color: darkgoldenrod;
+}
+
+.add:hover {
+	background-color: darkgreen;
+}
+
+.blue-btn:hover,
+.nav-btn:hover {
+	cursor: pointer;
+}
+
+.Edit-btn-container {
+	margin-top: 10px;
+	bottom: 0;
+	left: 0;
+}
+
+.Edit-field {
+	background-color: none;
+	border: none;
+	color: black;
+	font-size: 1rem;
+	padding: 5px;
+}
+
+.Edit-name {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 5px;
+	width: 40%;
 }
 
 .card-count {
-  right: 5px;
-  top: 5px;
-  font-size: 1.75rem;
-  font-weight: bold;
+	right: 5px;
+	top: 5px;
+	font-size: 1.75rem;
+	font-weight: bold;
 }
 
 .New-card-form {
-  height: 60vh;
-  min-height: 500px;
-  width: 70vw;
-  min-width: 300px;
-  background-color: #ebebeb;
-  z-index: 3;
-  opacity: .9;
+	height: 60vh;
+	min-height: 500px;
+	width: 70vw;
+	min-width: 300px;
+	background-color: #ebebeb;
+	z-index: 3;
+	opacity: 0.9;
 }
 
 label {
-  width: 100%;
-  text-align: center;
-  margin: 10px 0;
+	width: 100%;
+	text-align: center;
+	margin: 10px 0;
 }
 
-input {
-  padding: 5px;
-  margin: 3px 20px;
-  text-align: center;
-  width: 80%;
+.add-field {
+	padding: 5px;
+	margin: 3px 20px;
+	text-align: center;
+	width: 80%;
 }
 
 @media only screen and (max-width: 600px) {
